@@ -1,0 +1,56 @@
+/* .green{
+    color: green;
+}
+.red{
+    color: red;
+} */
+
+/* home work */
+
+.heading{
+    font-size: bold;
+}
+.container {
+  max-width: 480px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #000;
+}
+
+.small-c {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  border: 1px solid #000;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+.small-c p {
+  font-size: 16px;
+  margin: 6px 0;
+}

@@ -1,0 +1,78 @@
+<!-- <button (click)="isVisible =!isVisible">Check Here</button>
+ <button (click)="onToggle()">Check Here</button>
+<div *ngIf="isVisible">
+<h1>angular</h1>
+</div>
+
+<ul>
+  <li *ngFor="let item of items">
+{{item}}
+  </li>
+</ul>
+
+
+<select [(ngModel)]="role">
+<option value="admin">Admin</option>
+<option value="user">User</option>
+</select>
+
+<div [ngSwitch]="role">
+<p *ngSwitchCase="'admin'">Welcome Admin</p>
+<p *ngSwitchCase="'user'">Welcome User</p>
+<p *ngSwitchDefault>No Access</p>
+</div>
+
+<p [ngClass]="isActive ? 'green' : 'red'">Content</p> -->
+
+
+
+<!-- // home work // -->
+
+<div class="container">
+  <div class="small-c">
+  <h1>Angular Work Form</h1>
+  <div> 
+  <input [(ngModel)]="name" type="text" placeholder="enter your name">
+  <input [(ngModel)]="subject" type="text" placeholder="enter your subject">
+  <input [(ngModel)]="testScore1" type="text" placeholder="enter your testScore1">
+  <input [(ngModel)]="testScore2" type="text" placeholder="enter your testScore2">
+  </div>
+<button (click)="toggleSubmit()">Submit</button>
+
+  <!-- <button (click)="((name&&subject&&testScore1&&testScore2)?(isClicked=!isClicked):alert('please fill all the feilds') )">Submit</button> -->
+  </div>
+  <div *ngIf="!isClicked" class="small-c">
+  <h1 class="heading">{{`Hello ${name}! Your Score in ${subject} is ${(+testScore1)+(+testScore2)}`}}</h1>
+  <div>
+  <p>Inputs:</p>
+  <p>Name:{{name}}</p>
+  <p>Subject:{{subject}}</p>
+  <p>TestScore1:{{testScore1}}</p>
+  <p>TestScore2:{{testScore2}}</p>
+  </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- <div>
+  <h1>Counter Application</h1>
+  <h1>{{count}}</h1>
+  <button (click)="onDec()">Decrease</button>
+  <button (click)="onReset()">Reset</button>
+  <button (click)="onInc()">Increase</button>
+</div> -->
+
+<!-- <div>
+  <h1>Counter Application</h1>
+  <input [(ngModel)]="count">
+  <button (click)="onDec()">Decrease</button>
+  <button (click)="onReset()">Reset</button>
+  <button (click)="onInc()">Increase</button>
+</div> -->
