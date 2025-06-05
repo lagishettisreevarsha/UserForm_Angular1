@@ -9,6 +9,13 @@
 //   templateUrl: './app.component.html',
 //   styleUrl: './app.component.css'
 // })
+
+// export class AppComponent {
+//   fruits = ['Apple', 'Banana', 'Mango'];
+// }
+
+
+
 // export class AppComponent {
 
 //   title = 'new-app';
@@ -27,35 +34,35 @@
 
 //home work//
 
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
+// import { CommonModule } from '@angular/common';
+// import { Component } from '@angular/core';
+// import { FormsModule } from '@angular/forms';
+// import { RouterOutlet } from '@angular/router';
 
-@Component({
-  selector: 'app-root',
-  imports: [RouterOutlet,CommonModule,FormsModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
-})
-export class AppComponent {
+// @Component({
+//   selector: 'app-root',
+//   imports: [RouterOutlet,CommonModule,FormsModule],
+//   templateUrl: './app.component.html',
+//   styleUrl: './app.component.css'
+// })
+// export class AppComponent {
 
-  title = 'new-app';
-  name:string='';
-  subject:string='';
-  testScore1:string='';
-  testScore2:string='';
-  isClicked=true;
+//   title = 'new-app';
+//   name:string='';
+//   subject:string='';
+//   testScore1:number=0;
+//   testScore2:number=0;
+//   isClicked=true;
 
-  toggleSubmit() {
-  if (this.name && this.subject && this.testScore1 && this.testScore2) {
-    this.isClicked = !this.isClicked;
-  } else {
-    alert('Please fill all the fields');
-  }
-}
+//   toggleSubmit() {
+//   if (this.name && this.subject && this.testScore1 && this.testScore2) {
+//     this.isClicked = !this.isClicked;
+//   } else {
+//     alert('Please fill all the fields');
+//   }
+// }
 
-}
+// }
 
 
 // 
@@ -93,3 +100,37 @@ export class AppComponent {
 //     this.count=0
 //   }
 // }
+
+
+
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterOutlet } from '@angular/router';
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet,CommonModule,FormsModule],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+export class AppComponent {
+  title = 'new-app';
+  username:string='';
+  usergrade:string='';
+  profiles:{name:string,grade:string}[]=[];
+  isClicked=true;
+ 
+  addProfile(){
+    if (this.username&&this.usergrade){
+      const profile =({
+        name:this.username,
+        grade:this.usergrade.toUpperCase()
+      });
+      this.profiles.push(profile)
+      this.username='';
+      this.usergrade='';
+    }
+  }
+  
+}
