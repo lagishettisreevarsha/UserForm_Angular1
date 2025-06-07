@@ -55,8 +55,10 @@ button:hover {
   margin: 6px 0;
 } */
 
+/* /////////////////////////student dashboard/////////////////////// */
 
-* {
+
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -91,8 +93,8 @@ input {
 
 input:focus {
   border-color: #007BFF;
-}
-.btn {
+} */
+/* .btn {
   display: block;
   padding: 10px 20px;
   margin: 10px auto;
@@ -102,8 +104,8 @@ input:focus {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-}
-
+} */
+/* 
 .btn:hover {
   background-color: #218838;
 }
@@ -151,3 +153,24 @@ span[ngSwitch] {
   align-items: center;
 }
 
+.green{
+  color: #28a745;
+}
+.yellow{
+  color: #ffc107;
+}
+.red{
+  color: #dc3545;
+} */
+
+
+/* /////// SMART TASK TRACKER /////// */
+
+
+.date{
+  margin-left: 90px;
+}
+.v{
+  height: 20px;
+  width: 90px;
+}

@@ -87,7 +87,9 @@
 </ul> -->
 
 <!-- ///// STUDENT DASHBOARD///// -->
-<div>
+
+
+<!-- <div>
   <h1>Student Dashboard</h1>
   <div class="inputH">
   <input [(ngModel)]="username" type="text" placeholder="Enter UserName">
@@ -99,12 +101,46 @@
       <li *ngFor="let profile of profiles">
          👩‍🎓 {{ profile.name }} - Grade: {{ profile.grade }}
          <span [ngSwitch]="profile.grade">
-         <span *ngSwitchCase="'A'"> <span class="roundA"></span>Excellent</span>
-         <span *ngSwitchCase="'B'"> <span class="roundB"></span>Good</span>
-         <span *ngSwitchCase="'C'"> <span class="roundC"></span>Needs Improvement</span>
+         <span class="green" *ngSwitchCase="'A'"> <span class="roundA"></span>Excellent</span>
+         <span class="yellow" *ngSwitchCase="'B'"> <span class="roundB"></span>Good</span>
+         <span class="red" *ngSwitchCase="'C'"> <span class="roundC"></span>Needs Improvement</span>
          </span>
       </li>
     </ul>
   </div>
-</div>
+</div> -->
 
+
+
+<!-- //////////////////// SMART TASK TRACKER//////////////////// -->
+
+ 
+<div>
+  <h1>SMART TASK TRACKER</h1>
+<div>
+  <input [(ngModel)]="taskname" type="text">
+  <select  [(ngModel)]="selecttype" >
+    
+    <option>High</option>
+    <option>Medium</option>
+    <option>Low</option>
+  </select>
+  <input  [(ngModel)]="datetype" class="date" type="date">
+  
+</div> 
+<div class="btn">
+  <button (click)="btnclickk()" class="v">ADD Task</button>
+</div>
+<div>
+ <label> <input [(ngModel)]="check1" type="checkbox"> Completed </label>
+ <label> <input [(ngModel)]="check2" type="checkbox"> Not Completed </label>
+</div>
+<div >
+  <li *ngFor="let i of tasks">
+   
+  {{i.task}} , {{i.priority}} , {{i.date}}, {{i.status}}
+  
+</li>
+
+</div>
+</div>

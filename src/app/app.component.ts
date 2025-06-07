@@ -101,6 +101,39 @@
 //   }
 // }
 
+////////////STUDENT DASHBOARD///////////////////////
+
+// import { CommonModule } from '@angular/common';
+// import { Component } from '@angular/core';
+// import { FormsModule } from '@angular/forms';
+// import { RouterOutlet } from '@angular/router';
+
+// @Component({
+//   selector: 'app-root',
+//   imports: [RouterOutlet,CommonModule,FormsModule],
+//   templateUrl: './app.component.html',
+//   styleUrl: './app.component.css'
+// })
+// export class AppComponent {
+//   title = 'new-app';
+//   username:string='';
+//   usergrade:string='';
+//   profiles:{name:string,grade:string}[]=[];
+//   isClicked=true;
+ 
+//   addProfile(){
+//     if (this.username&&this.usergrade){
+//       const profile =({
+//         name:this.username,
+//         grade:this.usergrade.toUpperCase()
+//       });
+//       this.profiles.push(profile)
+//       this.username='';
+//       this.usergrade='';
+//     }
+//   }
+// }
+
 
 
 import { CommonModule } from '@angular/common';
@@ -112,25 +145,39 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   imports: [RouterOutlet,CommonModule,FormsModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'new-app';
-  username:string='';
-  usergrade:string='';
-  profiles:{name:string,grade:string}[]=[];
-  isClicked=true;
- 
-  addProfile(){
-    if (this.username&&this.usergrade){
-      const profile =({
-        name:this.username,
-        grade:this.usergrade.toUpperCase()
-      });
-      this.profiles.push(profile)
-      this.username='';
-      this.usergrade='';
-    }
-  }
+  btnclick=true;
+  taskname:string="";
+  selecttype:string="";
+  datetype:string="";
+  statustype:string="";
+  check1:string='';
+  check2:string='';
   
+  tasks:{
+status: any;task:string,priority:string,date:string
+}[]=[];
+   btnclickk() {
+
+    if (this.taskname && this.selecttype && this.datetype){
+      const currentDate = new Date ()
+      const selectedDate= new Date (this.datetype)
+
+      if (currentDate>selectedDate){
+        
+      }
+      const i= ({ 
+        task:this.taskname,
+        priority:this.selecttype,
+        date:this.datetype,
+        status: 'Not Completed',
+        // status:this.statustype
+      });
+      this.tasks.push(i);
+    }
+    
+  }
 }
